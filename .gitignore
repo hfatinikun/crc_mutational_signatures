@@ -1,0 +1,19 @@
+.DS_Store
+**/.DS_Store
+~$*
+*.RData
+*.Rhistory
+.Rproj.user/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+Rplots.pdf
+
+# Fitted catalogues, plots, and other generated outputs.
+# Thesis prose is kept; figures and slide exports are rebuilt by the pipeline.
+results/*
+!results/thesis/
+results/thesis/*
+!results/thesis/*.md
+!results/thesis/*.tsv
+!results/thesis/*.py

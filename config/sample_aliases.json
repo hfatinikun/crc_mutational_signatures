@@ -1,0 +1,18 @@
+{
+  "_comment": "Map Table S1 preclinical sample IDs to Preclinical_Dataset_WES matrix colnames",
+  "HHC6548": "HHC6548_XL",
+  "HROC107_cT0M2": "HROC107",
+  "HROC112_MET": "HROC112_MET_XL",
+  "HROC131_T0M3": "HROC131_XL",
+  "HROC239_T0M1": "HROC239_XL",
+  "HROC277_T0M1": "HROC277_T0M1_XL",
+  "HROC278_MET": "HROC278_MET_XL",
+  "HROC285_T2M2": "HROC285_XL",
+  "HROC300_T2M1": "HROC300",
+  "HROC313_MET1": "HROC313_MET",
+  "HROC46": "HROC46_XL",
+  "HROC50_T1M5": "HROC50_XL",
+  "HROC59": "HROC59_XL",
+  "HROC80": "HROC80_XL",
+  "HROC87": "HROC87_XL"
+}

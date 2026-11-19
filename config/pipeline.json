@@ -1,0 +1,71 @@
+{
+  "genome": "GRCh38",
+  "data_type_default": "WES",
+  "cosine_threshold": 0.9,
+  "phase": 2,
+  "paths": {
+    "input_dir": "input_files",
+    "cosmic_dir": "cosmic_files",
+    "metadata_dir": "metadata",
+    "results_dir": "results",
+    "config_dir": "config"
+  },
+  "datasets": {
+    "Preclinical": {
+      "file": "Preclinical_Dataset_WES.txt",
+      "data_type": "WES",
+      "cohort": "Preclinical",
+      "expected_n_samples": 230,
+      "phase": 1
+    },
+    "Clinical": {
+      "file": "Clinical_Dataset_WES.txt",
+      "data_type": "WES",
+      "cohort": "Clinical",
+      "expected_n_samples": 152,
+      "phase": 1
+    },
+    "Preclinical_WGS": {
+      "file": "Preclinical_Dataset_WGS.txt",
+      "data_type": "WGS",
+      "cohort": "Preclinical",
+      "expected_n_samples": 63,
+      "phase": 2
+    },
+    "Preclinical_TSO-500": {
+      "file": "Preclinical_Dataset_TSO-500.txt",
+      "data_type": "TSO-500",
+      "cohort": "Preclinical",
+      "expected_n_samples": 230,
+      "phase": 2
+    }
+  },
+  "cosmic": {
+    "v2": "COSMIC_v2_SBS_GRCh38.txt",
+    "v3.2": "COSMIC_v3.2_SBS_GRCh38.txt",
+    "v3.4": "COSMIC_v3.4_SBS_GRCh38.txt",
+    "v3.5": "COSMIC_v3.5_SBS_GRCh38.txt",
+    "v3.6": "COSMIC_v3.6_SBS_GRCh38.txt",
+    "TS": "COSMIC_CRC_tissue_specific_SBS_GRCh38.txt"
+  },
+  "cosmic_notes": {
+    "TS": "CRC tissue-specific subset of COSMIC v3.2 (24 SBS) matching Battuello et al. GitHub reference_analysis CRC_Specific list (paper text cites n=26)."
+  },
+  "tools": {
+    "MutationalPatterns": {"language": "R", "enabled": true},
+    "deconstructSigs": {"language": "R", "enabled": true},
+    "signature.tools.lib": {"language": "R", "enabled": true},
+    "sigLASSO": {"language": "R", "enabled": true},
+    "sigfit": {"language": "R", "enabled": true},
+    "sigminer": {"language": "R", "enabled": true},
+    "SigsPack": {"language": "R", "enabled": true},
+    "YAPSA": {"language": "R", "enabled": true},
+    "SigProfilerAssignment": {"language": "Python", "enabled": true},
+    "MuSiCal": {"language": "Python", "enabled": true},
+    "SignatureAnalyzer": {
+      "language": "Python",
+      "enabled": false,
+      "note": "Disabled: installed package path is de novo NMF+mapping, not catalogue fitting equivalent to the paper."
+    }
+  }
+}

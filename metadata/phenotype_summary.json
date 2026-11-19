@@ -1,0 +1,14 @@
+{
+  "preclinical": {
+    "n": 230,
+    "MSI": 78,
+    "MSS": 152,
+    "POLE_MUT": 7
+  },
+  "clinical": {
+    "n": 152,
+    "MSI": 68,
+    "MSS": 84,
+    "POLE_MUT": 5
+  }
+}

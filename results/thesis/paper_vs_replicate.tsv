@@ -1,0 +1,9 @@
+Analysis	Cohort	Data_Type	Tool	COSMIC_Version	Metric	Paper	Paper_note	Replicate	Abs_diff	Match
+Algorithm	Preclinical	WES	MutationalPatterns	v2	delta_MMR	0.34	approx. from paper text (~0.34)	0.344315289583048	0.004315289583048	TRUE
+Algorithm	Preclinical	WES	MutationalPatterns	v3.2	delta_MMR	0.26	approx. from paper text (~0.26)	0.256759472781204	0.00324052721879603	TRUE
+Algorithm	Preclinical	WES	SigProfilerAssignment	v2	delta_MMR	NA	highest ΔMMR among paper tool set	0.674860127146504	NA	TRUE
+Algorithm	Preclinical	WES	SigProfilerAssignment	v2	frac_assigned_ge_0.9	0.79	approx. ~79% assigned (cosine ≥ 0.9)	0.791304347826087	0.00130434782608702	TRUE
+NGS_workflow	Preclinical	WES	MutationalPatterns	v3.2	delta_MMR	NA	Fig. 3 pattern: intermediate vs TSO/WGS	0.256759472781204	NA	TRUE
+NGS_workflow	Preclinical	WGS	MutationalPatterns	v3.2	delta_MMR	NA	Fig. 3 pattern: lowest ΔMMR	0.114996019598921	NA	TRUE
+NGS_workflow	Preclinical	TSO-500	MutationalPatterns	v3.2	delta_MMR	NA	Fig. 3 pattern: highest ΔMMR	0.32349426595144	NA	TRUE
+NGS_workflow	Preclinical	WGS	MutationalPatterns	v3.2	median_flat_MSI	NA	Fig. 3D: flat signatures elevated on WGS MSI	0.268682890780706	NA	TRUE

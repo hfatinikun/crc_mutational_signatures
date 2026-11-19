@@ -20,8 +20,7 @@ Replication and expansion of Battuello et al. (*Brief Bioinform* 2024, [bbae249]
 | `scripts/r/` | R fitters + merge + downstream |
 | `scripts/python/` | SPA / MuSiCal runners |
 | `scripts/_archive/` | Previous exploratory scripts (do not run) |
-| `results/` | Contributions, reconstructions, cosine, plots |
-| `results/thesis/` | Thesis figure pack + paper-vs-replicate table |
+| `results/` | Local run outputs (not stored in this repository) |
 
 ## Prerequisites
 
@@ -62,43 +61,6 @@ Rscript scripts/r/00_combine_cosine.R
 Rscript scripts/r/downstream/run_downstream.R
 Rscript scripts/r/downstream/run_ngs_workflow.R
 ```
-
-## Thesis pack (paper style)
-
-Figures follow Battuello et al. ggplot grammar: `theme_bw`, MSI/MSS (`lightblue1`/`salmon2`), POLE (`darkgoldenrod1`/`olivedrab4`), dashed cosine = 0.9, contribution boxplots + Δ violins, SVG+PNG.
-
-```bash
-Rscript scripts/r/downstream/run_downstream.R
-Rscript scripts/r/downstream/run_ngs_workflow.R
-Rscript scripts/r/downstream/build_thesis_pack.R
-```
-
-Writes:
-
-| Path | Contents |
-|------|----------|
-| `results/downstream/plots/paper_style/` | Algorithm/reference paper panels |
-| `results/downstream/ngs_workflow/plots/paper_style/` | Fig. 3–style NGS panels |
-| `results/thesis/figures/` | `Fig01`–`Fig10` (+ SVG) and `FigS1`–`FigS5` grids |
-| `results/thesis/FIGURES.md` | Caption map |
-| `results/thesis/paper_vs_replicate.tsv` | Key paper-facing metrics vs this run |
-| `results/thesis/THESIS_RESULTS_AND_GAPS.md` | Draft Results write-up + gap analysis |
-
-## Paper vs replicate (highlights)
-
-Source table: [`results/thesis/paper_vs_replicate.tsv`](results/thesis/paper_vs_replicate.tsv). Paper ΔMMR values are approximate (~ from text); NGS cells check the published **ordering** (TSO > WES > WGS).
-
-| Metric | Setting | Paper | This run | Match |
-|--------|---------|-------|----------|-------|
-| ΔMMR | MP · preclinical WES · v2 | ~0.34 | **0.344** | yes |
-| ΔMMR | MP · preclinical WES · v3.2 | ~0.26 | **0.257** | yes |
-| frac assigned (≥0.9) | SPA · preclinical WES · v2 | ~79% | **182/230 (79.1%)** | yes |
-| ΔMMR ranking | SPA among paper tools · v2 | highest | **0.675** (highest in paper set*) | yes |
-| ΔMMR by NGS | MP · v3.2 | TSO > WES > WGS | **0.323 > 0.257 > 0.115** | yes |
-| Flat in MSI | MP · v3.2 · WGS | elevated on WGS | **median 0.269** (≈0 on WES/TSO) | yes |
-| ΔMMR | MP · preclinical WES · TS | ~0.27 | **0.272** | yes |
-
-\*With the expanded tool set, **sigLASSO** ΔMMR on v2 (0.734) exceeds SPA; SPA remains highest among the paper’s original tools.
 
 ## Phase 3 — optional expansion
 
